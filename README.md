@@ -23,7 +23,7 @@ In International Conference on Learning Representations (ICLR) 2019 **(Oral Pres
 ```
 @inproceedings{Mao2019NeuroSymbolic,
 	title={{The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences From Natural Supervision}},
-	author={Mao, Jiayuan and Gan, Chuang and Kohli, Pushmeet and Tenenbaum, Joshua B. and Wu, Jiajun},
+	author={Mao, Jiayuan and Gan, Chuang and Kohli, Pushmeet and Tenenbaum, Joshua B and Wu, Jiajun},
 	booktitle={International Conference on Learning Representations},
 	year={2019},
 	url={https://openreview.net/forum?id=rJgMlhRctm}
@@ -97,7 +97,7 @@ To train the model:
 jac-crun <gpu_id> scripts/trainval.py --desc experiments/clevr/desc_nscl_derender.py --training-target derender --curriculum all --dataset clevr --data-dir <data_dir>/clevr/train --batch-size 32 --epoch 100 --validation-interval 5 --save-interval 5 --data-split 0.95
 ```
 The `--data-split 0.95` specifies that five percent of the training data will be held out as the develop set. Since the annotation for the test split is not available for the CLEVR dataset, we will test our model on the original validation split.
-A sample training log is provided at [this URL](http://nscl.csail.mit.du/data/code-data/clevr/log/run-2019-04-07-16-25-45.log). A pretrained model is available at [this URL](http://nscl.csail.mit.du/data/code-data/clevr/model/derender-curriculum_all-qtrans_off-clevrfull-epoch_100.pth).
+A sample training log is provided at [this URL](http://nscl.csail.mit.edu/data/code-data/clevr/log/run-2019-04-07-16-25-45.log). A pretrained model is available at [this URL](http://nscl.csail.mit.edu/data/code-data/clevr/model/derender-curriculum_all-qtrans_off-clevrfull-epoch_100.pth).
 
 To test on the validation split, you need to download the `clevr/val/questions.json` that includes parsed programs at [this URL](http://nscl.csail.mit.edu/data/code-data/clevr/val/questions.json.zip). Note that since we do not include any annotated programs during training, the parsed programs in this file can be different from the original CLEVR dataset (due to the "equivalence" between programs).
 ```
